@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --color-bordeaux:  #73061B;
+  --color-bronze:    #897257;
+  --color-champagne: #A79479;
+  --color-cream:     #E5DBCF;
+  --color-linen:     #EAE7E2;
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    /* Ritmo vertical mais sofisticado que o padrão 1.5 */
+    line-height: 1.7;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-champagne ring-offset-2;
+  }
+
+  ::selection {
+    background-color: var(--color-bordeaux);
+    color: white;
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────────── */
+@layer utilities {
+  .pattern-bordeaux {
+    background-image: url('/assets/pattern/pattern-bordeaux.jpg');
+    background-size: 280px;
+    background-repeat: repeat;
+    opacity: 0.08;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .pattern-cream {
+    background-image: url('/assets/pattern/pattern-cream.jpg');
+    background-size: 280px;
+    background-repeat: repeat;
+    opacity: 0.06;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  ::-webkit-scrollbar        { width: 5px; }
+  ::-webkit-scrollbar-track  { background: var(--color-linen); }
+  ::-webkit-scrollbar-thumb  { background: var(--color-champagne); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-bronze); }
+}
