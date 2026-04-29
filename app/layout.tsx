@@ -34,6 +34,9 @@ export const viewport: Viewport = {
 /* ─── Metadata ──────────────────────────────────────────────── */
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mirellemanheze.adv.br'
 
+// URL absoluta da imagem OG — obrigatória para WhatsApp, LinkedIn e Twitter
+const ogImageUrl = `${siteUrl}/og-image.jpg`
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
     template: '%s | Dra. Mirelle Manheze',
   },
   description:
-    'Advocacia sólida, estratégica e confiável em Santo André, SP. Dra. Mirelle Manheze oferece assessoria jurídica com ética, preparo e dedicação. OAB/SP 540.038. Agende sua consulta.',
+    'Assessoria jurídica com estratégia, ética e dedicação. Atendimento personalizado para proteger seus direitos com segurança e confiança.',
   keywords: [
     'advogada',
     'advocacia',
@@ -60,23 +63,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: siteUrl,
-    siteName: 'Dra. Mirelle Manheze — Advocacia e Assessoria Jurídica',
-    title: 'Dra. Mirelle Manheze | Advocacia e Assessoria Jurídica',
-    description:
-      'Advocacia sólida, estratégica e confiável em Santo André, SP. OAB/SP 540.038. Agende sua consulta.',
-    images: [{
-      url: '/og-image.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'Dra. Mirelle Manheze — Advocacia e Assessoria Jurídica',
-    }],
+    siteName: 'Mirelle Manheze',
+    title: 'Dra. Mirelle Manheze',
+    description: 'Advocacia e Assessoria Jurídica',
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: 'Dra. Mirelle Manheze — Advocacia e Assessoria Jurídica',
+        type: 'image/jpeg',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dra. Mirelle Manheze | Advocacia e Assessoria Jurídica',
-    description:
-      'Advocacia sólida, estratégica e confiável em Santo André, SP. OAB/SP 540.038. Agende sua consulta.',
-    images: ['/og-image.jpg'],
+    title: 'Dra. Mirelle Manheze',
+    description: 'Advocacia e Assessoria Jurídica',
+    images: [ogImageUrl],
   },
   robots: {
     index: true,
@@ -96,7 +100,7 @@ const jsonLd = {
   description:
     'Advocacia sólida, estratégica e confiável, com foco em Direito de Família, Direito Civil, Inventários, Contratos e Assessoria Preventiva.',
   url: siteUrl,
-  image: `${siteUrl}/og-image.jpg`,
+  image: ogImageUrl,
   telephone: '+5511979881341',
   email: 'contato@mirellemanheze.adv.br',
   priceRange: 'Consultar',
