@@ -40,7 +40,6 @@ export default function Footer() {
 
             <span className="hidden sm:block text-champagne/20 text-xs" aria-hidden="true">|</span>
 
-            {/* Substituir pelo número OAB real antes do lançamento */}
             <span className="font-red-hat text-[10px] tracking-brand uppercase text-champagne/55">
               OAB/SP 540.038
             </span>
@@ -48,9 +47,20 @@ export default function Footer() {
         </div>
 
         <Divider light className="max-w-sm mx-auto mt-10 mb-6 opacity-20" />
-        <p className="text-center font-red-hat text-[10px] tracking-wider text-white/25">
-          © {currentYear} Dra. Mirelle Manheze. Todos os direitos reservados.
-        </p>
+
+        <div className="flex flex-col items-center gap-2">
+          <p className="font-red-hat text-[10px] tracking-wider text-white/25 text-center">
+            © {currentYear} Dra. Mirelle Manheze. Todos os direitos reservados.
+          </p>
+          <a
+            href="https://github.com/rafaelmotadasilva"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-red-hat text-[10px] tracking-wider text-white/25 hover:text-white/50 transition-colors duration-250"
+          >
+            Desenvolvido por Rafael Mota
+          </a>
+        </div>
       </div>
     </footer>
   )
