@@ -53,10 +53,10 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(resendKey)
 
   const { error } = await resend.emails.send({
-    from: 'Site Mirelle <onboarding@resend.dev>',
+    from: 'Site Mirelle <contato@mirellemanheze.adv.br>',
     to: toEmail,
     reply_to: email,
-    subject: `Nova mensagem de ${name}`,
+    subject: `Novo contato pelo site - Mirelle Manheze`,
     html: `
       <div style="font-family: Georgia, serif; color: #73061B; max-width: 600px; margin: 0 auto; padding: 32px;">
         <h2 style="font-size: 20px; margin-bottom: 24px; border-bottom: 1px solid #A79479; padding-bottom: 12px;">
