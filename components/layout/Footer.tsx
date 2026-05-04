@@ -58,7 +58,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="font-red-hat text-[10px] tracking-wider text-white/25 hover:text-white/50 transition-colors duration-250"
           >
-            Desenvolvido por Rafael Mota
+            Desenvolvido por Rafael Mota • Infraestrutura & Cloud
           </a>
         </div>
       </div>
