@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { Bona_Nova, Ephesis, Red_Hat_Display } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
+
+const GA_ID = 'G-3N4XJYRHW0'
 
 /* ─── Fontes ────────────────────────────────────────────────── */
 const bonaNova = Bona_Nova({
@@ -144,6 +147,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </head>
       <body className="bg-linen text-bordeaux font-red-hat antialiased">
         {children}
