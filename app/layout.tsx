@@ -119,7 +119,7 @@ const jsonLd = {
     addressCountry: 'BR',
   },
   sameAs: [
-    'https://www.instagram.com/mirellemanheze.adv',
+    'https://www.instagram.com/dramirellemanheze',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

@@ -19,14 +19,14 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
             <a
-              href="https://www.instagram.com/mirellemanheze.adv"
+              href="https://www.instagram.com/dramirellemanheze"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 font-red-hat text-[10px] tracking-brand uppercase text-champagne/70 hover:text-champagne transition-colors duration-250"
               aria-label="Instagram da Dra. Mirelle Manheze (abre em nova aba)"
             >
               <Instagram size={13} aria-hidden="true" />
-              @mirellemanheze.adv
+              @dramirellemanheze
             </a>
 
             <span className="hidden sm:block text-champagne/20 text-xs" aria-hidden="true">|</span>
