@@ -81,7 +81,7 @@ export default function PracticeAreas() {
                     />
                   </div>
 
-                  <h3 className="font-bona-nova text-bordeaux group-hover:text-white text-xl tracking-wide leading-heading mb-4 transition-colors duration-300">
+                  <h3 className="font-bona-nova text-bordeaux group-hover:text-white text-2xl tracking-wide leading-heading mb-4 transition-colors duration-300">
                     {area.title}
                   </h3>
 

@@ -22,7 +22,7 @@ export default function Footer() {
               href="https://www.instagram.com/dramirellemanheze"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 font-red-hat text-[10px] tracking-brand uppercase text-champagne/70 hover:text-champagne transition-colors duration-250"
+              className="flex items-center gap-2 font-red-hat text-xs tracking-brand uppercase text-champagne/70 hover:text-champagne transition-colors duration-250"
               aria-label="Instagram da Dra. Mirelle Manheze (abre em nova aba)"
             >
               <Instagram size={13} aria-hidden="true" />
@@ -33,14 +33,14 @@ export default function Footer() {
 
             <a
               href="/politica-de-privacidade"
-              className="font-red-hat text-[10px] tracking-brand uppercase text-champagne/50 hover:text-champagne/80 transition-colors duration-250"
+              className="font-red-hat text-xs tracking-brand uppercase text-champagne/50 hover:text-champagne/80 transition-colors duration-250"
             >
               Política de Privacidade
             </a>
 
             <span className="hidden sm:block text-champagne/20 text-xs" aria-hidden="true">|</span>
 
-            <span className="font-red-hat text-[10px] tracking-brand uppercase text-champagne/55">
+            <span className="font-red-hat text-xs tracking-brand uppercase text-champagne/55">
               OAB/SP 540.038
             </span>
           </div>
@@ -49,14 +49,14 @@ export default function Footer() {
         <Divider light className="max-w-sm mx-auto mt-10 mb-6 opacity-20" />
 
         <div className="flex flex-col items-center gap-2">
-          <p className="font-red-hat text-[10px] tracking-wider text-white/25 text-center">
+          <p className="font-red-hat text-xs tracking-wider text-white/25 text-center">
             © {currentYear} Dra. Mirelle Manheze. Todos os direitos reservados.
           </p>
           <a
             href="https://github.com/rafaelmotadasilva"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-red-hat text-[10px] tracking-wider text-white/25 hover:text-white/50 transition-colors duration-250"
+            className="font-red-hat text-xs tracking-wider text-white/25 hover:text-white/50 transition-colors duration-250"
           >
             Desenvolvido por Rafael Mota • Infraestrutura & Cloud
           </a>

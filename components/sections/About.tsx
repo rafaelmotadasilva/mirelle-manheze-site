@@ -75,7 +75,7 @@ export default function About() {
             <dl className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
               {credentials.map((item) => (
                 <div key={item.label} className="border-t-2 border-champagne/40 pt-5">
-                  <dt className="font-red-hat text-[10px] tracking-brand uppercase text-bronze mb-2">
+                  <dt className="font-red-hat text-xs tracking-brand uppercase text-bronze mb-2">
                     {item.label}
                   </dt>
                   <dd className="font-bona-nova text-bordeaux text-lg tracking-wide leading-tight">

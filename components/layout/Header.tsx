@@ -120,7 +120,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'font-red-hat font-medium text-[11px] tracking-brand uppercase transition-colors duration-250',
+                  'font-red-hat font-medium text-xs tracking-brand uppercase transition-colors duration-250',
                   scrolled
                     ? 'text-bordeaux hover:text-bronze'
                     : 'text-white/80 hover:text-champagne',
@@ -132,7 +132,6 @@ export default function Header() {
             <Button
               href={whatsappUrl}
               variant={scrolled ? 'primary' : 'outline-light'}
-              size="sm"
               target="_blank"
               className="ml-2"
             >

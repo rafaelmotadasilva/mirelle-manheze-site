@@ -116,7 +116,7 @@ export default function PrivacyPage() {
 
               {/* Índice lateral — desktop */}
               <aside aria-label="Índice da política" className="hidden lg:block sticky top-28 self-start">
-                <p className="font-red-hat text-[10px] tracking-brand uppercase text-bronze mb-5">
+                <p className="font-red-hat text-xs tracking-brand uppercase text-bronze mb-5">
                   Conteúdo
                 </p>
                 <nav aria-label="Seções da política de privacidade">
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
                           href={`#${s.id}`}
                           className="flex items-center gap-3 font-red-hat text-sm text-warm hover:text-bordeaux transition-colors duration-250 group"
                         >
-                          <span className="text-[10px] tracking-wider text-champagne group-hover:text-bronze transition-colors duration-250 w-5 flex-shrink-0">
+                          <span className="text-xs tracking-wider text-champagne group-hover:text-bronze transition-colors duration-250 w-5 flex-shrink-0">
                             {s.number}
                           </span>
                           {s.title}

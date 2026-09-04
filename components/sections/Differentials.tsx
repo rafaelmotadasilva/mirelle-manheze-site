@@ -79,7 +79,7 @@ export default function Differentials() {
                     <Icon size={28} className="text-champagne" aria-hidden />
                   </div>
 
-                  <h3 className="relative font-bona-nova text-white text-xl tracking-wide leading-heading mb-4">
+                  <h3 className="relative font-bona-nova text-white text-2xl tracking-wide leading-heading mb-4">
                     {item.title}
                   </h3>
 

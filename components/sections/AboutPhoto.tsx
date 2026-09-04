@@ -47,7 +47,7 @@ function PhotoPlaceholder() {
         <p className="font-red-hat text-xs tracking-brand uppercase text-bronze/50">
           Foto profissional
         </p>
-        <p className="font-red-hat text-[10px] text-bronze/30 leading-relaxed">
+        <p className="font-red-hat text-xs text-bronze/30 leading-relaxed">
           Adicione em<br />
           <span className="font-mono">public/assets/photo/</span>
         </p>

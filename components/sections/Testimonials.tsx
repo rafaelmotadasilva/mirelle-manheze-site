@@ -76,7 +76,7 @@ export default function Testimonials() {
                   <span className="font-ephesis text-bronze text-2xl leading-none">
                     {t.name}
                   </span>
-                  <span className="font-red-hat text-[10px] tracking-brand uppercase text-bronze/75">
+                  <span className="font-red-hat text-xs tracking-brand uppercase text-bronze/75">
                     {t.context}
                   </span>
                 </figcaption>

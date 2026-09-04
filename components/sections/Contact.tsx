@@ -53,7 +53,7 @@ const contactInfo = [
   },
 ] as const
 
-const labelClass = 'block font-red-hat text-[10px] tracking-brand uppercase text-bronze mb-2.5'
+const labelClass = 'block font-red-hat text-xs tracking-brand uppercase text-bronze mb-2.5'
 const errorClass = 'mt-2 font-red-hat text-xs text-red-600 leading-snug'
 
 /* ─── Componente ─────────────────────────────────────────────── */
@@ -105,7 +105,7 @@ export default function Contact() {
                   <div className="flex items-start gap-5">
                     <Icon size={17} className="text-bronze/70 flex-shrink-0 mt-0.5" aria-hidden />
                     <div>
-                      <p className="font-red-hat text-[10px] tracking-brand uppercase text-bronze mb-1">
+                      <p className="font-red-hat text-xs tracking-brand uppercase text-bronze mb-1">
                         {item.label}
                       </p>
                       <p className="font-red-hat text-sm text-bordeaux leading-snug">
