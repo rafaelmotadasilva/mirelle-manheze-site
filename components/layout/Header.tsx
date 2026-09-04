@@ -83,6 +83,21 @@ export default function Header() {
 
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
+  /*
+    Navegação do menu mobile: salta para a seção enquanto o overlay ainda
+    está opaco (invisível ao usuário) e só então inicia o fade de
+    fechamento — evita o menu aparecer transparente sobre a seção
+    enquanto o scroll suave nativo ainda está em andamento.
+  */
+  const handleMobileNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault()
+      document.querySelector(href)?.scrollIntoView({ behavior: 'instant' })
+      setMenuOpen(false)
+    },
+    [],
+  )
+
   const whatsappUrl = formatWhatsAppUrl(WA_NUMBER, WA_DEFAULT_MSG)
 
   return (
@@ -183,7 +198,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              onClick={closeMenu}
+              onClick={(e) => handleMobileNavClick(e, link.href)}
               tabIndex={menuOpen ? 0 : -1}
               className="font-red-hat font-medium text-sm tracking-brand uppercase text-white/80 hover:text-champagne transition-colors duration-250"
             >
