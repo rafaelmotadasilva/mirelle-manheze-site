@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="max-w-3xl">
 
             <p
-              className="font-ephesis text-champagne/90 text-4xl sm:text-5xl mb-3 leading-none"
+              className="font-ephesis text-champagne/90 text-3xl sm:text-4xl mb-3 leading-none"
               aria-hidden="true"
             >
               Seja bem-vindo(a)
@@ -41,17 +41,17 @@ export default function Hero() {
             <div className="h-px w-12 bg-champagne/60 mb-8" aria-hidden="true" />
 
             {/*
-              Escala responsiva da headline:
-              - mobile  (< 640px):  text-4xl = 36px — evita quebras excessivas
-              - sm      (≥ 640px):  text-5xl = 48px — tablets portrait
-              - md      (≥ 768px):  text-6xl = 60px — tablets landscape
-              - lg/xl   (≥ 1024px): text-7xl = 72px — desktop (impacto monumental)
+              Escala responsiva da headline — tamanho padrão (CLAUDE.md: H1 56–72px):
+              - mobile  (< 640px):  text-3xl = 30px
+              - sm      (≥ 640px):  text-4xl = 36px
+              - md      (≥ 768px):  text-5xl = 48px
+              - lg/xl   (≥ 1024px): text-6xl = 60px — padrão, sem exagero
             */}
-            <h1 className="font-bona-nova font-normal text-white tracking-tight leading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-7">
+            <h1 className="font-bona-nova font-normal text-white tracking-tight leading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-7">
               Advocacia com estratégia, ética e dedicação.
             </h1>
 
-            <p className="font-red-hat text-white/75 text-base md:text-lg lg:text-xl leading-relaxed mb-12 max-w-xl">
+            <p className="font-red-hat text-white/75 text-base md:text-lg leading-relaxed mb-12 max-w-xl">
               Assessoria jurídica conduzida com preparo, responsabilidade e comprometimento
               com os direitos de cada cliente.
             </p>
