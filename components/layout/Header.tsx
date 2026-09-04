@@ -101,79 +101,87 @@ export default function Header() {
   const whatsappUrl = formatWhatsAppUrl(WA_NUMBER, WA_DEFAULT_MSG)
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-linen/95 backdrop-blur-sm border-b border-champagne/25 shadow-sm'
-          : 'bg-transparent',
-      )}
-    >
-      {/* Skip-to-content — WCAG 2.4.1 */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-bordeaux focus:text-white focus:px-4 focus:py-2 focus:font-red-hat focus:text-sm focus:rounded-brand"
+    <>
+      <header
+        className={cn(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          scrolled
+            ? 'bg-linen/95 backdrop-blur-sm border-b border-champagne/25 shadow-sm'
+            : 'bg-transparent',
+        )}
       >
-        Pular para o conteúdo
-      </a>
+        {/* Skip-to-content — WCAG 2.4.1 */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-bordeaux focus:text-white focus:px-4 focus:py-2 focus:font-red-hat focus:text-sm focus:rounded-brand"
+        >
+          Pular para o conteúdo
+        </a>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
 
-          <a href="#inicio" aria-label="Dra. Mirelle Manheze — Página inicial">
-            <Logo
-              mode={scrolled ? 'dark' : 'light'}
-              height={36}
-              priority
-            />
-          </a>
+            <a href="#inicio" aria-label="Dra. Mirelle Manheze — Página inicial">
+              <Logo
+                mode={scrolled ? 'dark' : 'light'}
+                height={36}
+                priority
+              />
+            </a>
 
-          {/* Nav desktop */}
-          <nav aria-label="Navegação principal" className="hidden lg:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  'font-red-hat font-medium text-xs tracking-brand uppercase transition-colors duration-250',
-                  scrolled
-                    ? 'text-bordeaux hover:text-bronze'
-                    : 'text-white/80 hover:text-champagne',
-                )}
+            {/* Nav desktop */}
+            <nav aria-label="Navegação principal" className="hidden lg:flex items-center gap-7">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    'font-red-hat font-medium text-xs tracking-brand uppercase transition-colors duration-250',
+                    scrolled
+                      ? 'text-bordeaux hover:text-bronze'
+                      : 'text-white/80 hover:text-champagne',
+                  )}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <Button
+                href={whatsappUrl}
+                variant={scrolled ? 'primary' : 'outline-light'}
+                target="_blank"
+                className="ml-2"
               >
-                {link.label}
-              </a>
-            ))}
-            <Button
-              href={whatsappUrl}
-              variant={scrolled ? 'primary' : 'outline-light'}
-              target="_blank"
-              className="ml-2"
-            >
-              Agendar Consulta
-            </Button>
-          </nav>
+                Agendar Consulta
+              </Button>
+            </nav>
 
-          {/* Hamburguer */}
-          <button
-            ref={hamburgerRef}
-            type="button"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-            className={cn(
-              'lg:hidden p-2 rounded-brand transition-colors duration-250',
-              scrolled ? 'text-bordeaux' : 'text-white',
-            )}
-          >
-            {menuOpen ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
-          </button>
+            {/* Hamburguer */}
+            <button
+              ref={hamburgerRef}
+              type="button"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label={menuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              className={cn(
+                'lg:hidden p-2 rounded-brand transition-colors duration-250',
+                scrolled ? 'text-bordeaux' : 'text-white',
+              )}
+            >
+              {menuOpen ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/*
         Menu mobile.
+        - Renderizado fora do <header> propositalmente: o header ganha
+          backdrop-blur (backdrop-filter) quando "scrolled", e qualquer
+          ancestral com filter/backdrop-filter/transform vira containing
+          block para descendentes position:fixed — o que quebrava o
+          posicionamento fixed deste menu sempre que a página não estava
+          no topo. Como sibling, ele sempre se posiciona pela viewport.
         - aria-hidden={!menuOpen}: oculta do leitor de tela quando fechado
         - role="dialog" + aria-modal: sinaliza modal para AT
         - Focus trap no useEffect acima garante que Tab não escapa do menu
@@ -220,6 +228,6 @@ export default function Header() {
           </Button>
         </nav>
       </div>
-    </header>
+    </>
   )
 }
