@@ -50,7 +50,7 @@ export default function SectionTitle({
         id={id}
         className={cn(
           'font-bona-nova font-normal tracking-wide leading-heading',
-          'text-3xl md:text-4xl lg:text-[2.75rem]',
+          'text-4xl lg:text-[2.75rem]',
           light ? 'text-white' : 'text-bordeaux',
         )}
       >
