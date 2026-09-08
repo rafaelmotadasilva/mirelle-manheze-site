@@ -46,12 +46,12 @@ export default function About() {
 
             <div className="space-y-6 font-red-hat text-warm text-base leading-[1.8]">
               <p>
-                A marca{' '}
+                O escritório{' '}
                 <strong className="font-medium text-bordeaux">Dra. Mirelle Manheze</strong>{' '}
                 surge de uma trajetória construída com determinação, ética e um profundo
-                comprometimento com a justiça. Mais do que oferecer serviços jurídicos, o
-                escritório nasce com a missão de entregar estratégia, organização e uma
-                defesa firme e responsável dos direitos de cada cliente.
+                comprometimento com a justiça. Mais do que oferecer serviços jurídicos, nasce
+                com a missão de entregar estratégia, organização e uma defesa firme e
+                responsável dos direitos de cada cliente.
               </p>
               <p>
                 Cada caso é conduzido com atenção individualizada. O comprometimento vai além
