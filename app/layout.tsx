@@ -129,7 +129,7 @@ const jsonLd = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Direito Civil' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inventários e Sucessões' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Contratos e Negócios' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Direito do Consumidor' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Direito Trabalhista' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Assessoria Preventiva' } },
     ],
   },

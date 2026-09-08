@@ -1,4 +1,4 @@
-import { Users, Scale, FileText, FileCheck, ShieldCheck, Lightbulb, type LucideIcon } from 'lucide-react'
+import { Users, Scale, FileText, FileCheck, Briefcase, Lightbulb, type LucideIcon } from 'lucide-react'
 import SectionTitle from '@/components/ui/SectionTitle'
 import Button from '@/components/ui/Button'
 import { cn, formatWhatsAppUrl, WA_DEFAULT_MSG } from '@/lib/utils'
@@ -35,10 +35,10 @@ const areas: PracticeArea[] = [
       'Elaboração, revisão e análise de contratos em geral, com foco na proteção dos interesses do cliente e na prevenção de litígios.',
   },
   {
-    icon: ShieldCheck,
-    title: 'Direito do Consumidor',
+    icon: Briefcase,
+    title: 'Direito Trabalhista',
     description:
-      'Defesa dos direitos do consumidor frente a cobranças indevidas, negativações, atrasos em entrega, vícios de produto e serviço.',
+      'Defesa dos direitos dos trabalhadores em questões relacionadas a rescisões, verbas trabalhistas, horas extras, estabilidade e doenças ocupacionais.',
   },
   {
     icon: Lightbulb,
