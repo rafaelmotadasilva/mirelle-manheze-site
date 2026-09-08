@@ -51,7 +51,7 @@ export default function Hero() {
               Advocacia com estratégia, ética e dedicação.
             </h1>
 
-            <p className="font-red-hat text-white/75 text-base md:text-lg leading-relaxed mb-12 max-w-xl">
+            <p className="font-red-hat text-white/75 text-base md:text-lg leading-relaxed mb-12 max-w-xl text-justify">
               Passando por um divórcio, uma partilha de bens, um contrato ou uma questão
               trabalhista? Cada situação é ouvida com atenção antes de qualquer decisão — e
               conduzida com preparo do início ao fim.
