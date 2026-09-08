@@ -41,28 +41,37 @@ export default function About() {
             <SectionTitle
               id="sobre-titulo"
               subtitle="Sobre"
-              title="Uma trajetória construída com determinação e propósito"
+              title="Segurança jurídica para tomar decisões com confiança"
             />
 
-            <div className="space-y-6 font-red-hat text-warm text-base leading-[1.8]">
+            <div className="space-y-6 font-red-hat text-warm text-base leading-[1.8] text-justify">
               <p>
                 O escritório{' '}
                 <strong className="font-medium text-bordeaux">Dra. Mirelle Manheze</strong>{' '}
-                surge de uma trajetória construída com determinação, ética e um profundo
-                comprometimento com a justiça. Mais do que oferecer serviços jurídicos, nasce
-                com a missão de entregar estratégia, organização e uma defesa firme e
-                responsável dos direitos de cada cliente.
+                — Advocacia e Assessoria Jurídica nasceu de uma trajetória construída com
+                ética, dedicação e compromisso com a justiça.
               </p>
               <p>
-                Cada caso é conduzido com atenção individualizada. O comprometimento vai além
-                da representação jurídica formal — é compreender a situação com profundidade,
-                estudar as possibilidades e buscar as melhores soluções de forma responsável
-                e bem fundamentada.
+                Mais do que prestar serviços jurídicos, o propósito é entender cada situação,
+                antecipar riscos e construir estratégias jurídicas seguras e personalizadas
+                para cada cliente. Porque nenhum caso é igual ao outro.
               </p>
               <p>
-                Uma advocacia sólida, estratégica e confiável. Uma presença que transmite
-                segurança e respeito, mas também proximidade e humanidade — porque cada
-                decisão importa e cada cliente merece ser ouvido.
+                Cada demanda é analisada de forma individualizada, com atenção aos detalhes,
+                estudo aprofundado e uma atuação estratégica voltada à busca da melhor solução
+                possível — sempre com responsabilidade, transparência e fundamento jurídico.
+              </p>
+              <p>
+                Aqui, você encontra uma advocacia que une conhecimento técnico, estratégia e
+                proximidade. Uma atuação firme quando necessário, cuidadosa em cada decisão e
+                humana em todos os momentos.
+              </p>
+              <p>
+                Seu problema merece ser compreendido.
+                <br />
+                Sua decisão merece segurança.
+                <br />
+                Seus direitos merecem uma defesa à altura.
               </p>
             </div>
 
