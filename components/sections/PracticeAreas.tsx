@@ -1,6 +1,7 @@
 import { Users, Scale, FileText, FileCheck, ShieldCheck, Lightbulb, type LucideIcon } from 'lucide-react'
 import SectionTitle from '@/components/ui/SectionTitle'
-import { cn } from '@/lib/utils'
+import Button from '@/components/ui/Button'
+import { cn, formatWhatsAppUrl, WA_DEFAULT_MSG } from '@/lib/utils'
 
 interface PracticeArea {
   icon:        LucideIcon
@@ -48,6 +49,11 @@ const areas: PracticeArea[] = [
 ]
 
 export default function PracticeAreas() {
+  const whatsappUrl = formatWhatsAppUrl(
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '',
+    WA_DEFAULT_MSG,
+  )
+
   return (
     <section id="atuacao" aria-labelledby="atuacao-titulo" className="bg-cream">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 py-28 lg:py-36">
@@ -93,6 +99,12 @@ export default function PracticeAreas() {
             )
           })}
         </ul>
+
+        <div className="flex justify-center mt-16">
+          <Button href={whatsappUrl} variant="outline-dark" target="_blank">
+            Agendar Consulta
+          </Button>
+        </div>
       </div>
     </section>
   )

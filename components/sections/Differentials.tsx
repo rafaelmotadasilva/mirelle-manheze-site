@@ -2,6 +2,8 @@ import { UserCheck, Target, ShieldCheck, MessageSquare, type LucideIcon } from '
 import SectionTitle from '@/components/ui/SectionTitle'
 import PatternBackground from '@/components/ui/PatternBackground'
 import Divider from '@/components/ui/Divider'
+import Button from '@/components/ui/Button'
+import { formatWhatsAppUrl, WA_DEFAULT_MSG } from '@/lib/utils'
 
 interface Differential {
   icon:        LucideIcon
@@ -37,6 +39,11 @@ const differentials: Differential[] = [
 ]
 
 export default function Differentials() {
+  const whatsappUrl = formatWhatsAppUrl(
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '',
+    WA_DEFAULT_MSG,
+  )
+
   return (
     <section
       id="diferenciais"
@@ -91,6 +98,12 @@ export default function Differentials() {
             )
           })}
         </ul>
+
+        <div className="flex justify-center mt-16">
+          <Button href={whatsappUrl} variant="outline-light" target="_blank">
+            Agendar Consulta
+          </Button>
+        </div>
       </div>
 
       <Divider light className="absolute bottom-0 left-0 right-0 opacity-20" />
